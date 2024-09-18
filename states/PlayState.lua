@@ -67,7 +67,7 @@ function PlayState:render()
         love.graphics.setColor(1, 1, 1)
         love.graphics.print(satellite.skin .. "_sumx:" .. string.format("%.4f", satellite.sumAccel_x), 0, 32 * (i - 1))
         love.graphics.print(satellite.skin .. "_sumy:" .. string.format("%.4f", satellite.sumAccel_y), 0, 32 * (i - 1) +
-        16)
+            16)
         love.graphics.pop()
     end
 

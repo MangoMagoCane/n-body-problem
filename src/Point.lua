@@ -1,4 +1,4 @@
-Point = Class{}
+Point = Class {}
 
 function Point:init(x, y, color)
     self.color = color
@@ -6,7 +6,6 @@ function Point:init(x, y, color)
     self.x = x
     self.y = y
 end
-
 
 function Point:render()
     love.graphics.setColor(self.color)

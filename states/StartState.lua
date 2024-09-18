@@ -1,4 +1,4 @@
-StartState = Class{__includes = BaseState}
+StartState = Class { __includes = BaseState }
 
 function StartState:init()
     self.satellites = {}
@@ -11,13 +11,12 @@ function StartState:init()
     end
 end
 
-
 function StartState:update(dt)
     if love.keyboard.wasPressed('up') then
         if self.current_table == 1 then
             gSounds['no-select']:play()
             self.current_table = self.table_count
-        else 
+        else
             gSounds['select']:play()
             self.current_table = self.current_table - 1
         end
@@ -45,12 +44,11 @@ function StartState:update(dt)
     end
 end
 
-
 function StartState:render()
     love.graphics.push()
-    love.graphics.scale(SCALE_FACTOR/2, SCALE_FACTOR/2)
-        for i, params in ipairs(self.table) do
-            love.graphics.print(params.skin, 0, 16*(i))
-        end
+    love.graphics.scale(SCALE_FACTOR / 2, SCALE_FACTOR / 2)
+    for i, params in ipairs(self.table) do
+        love.graphics.print(params.skin, 0, 16 * (i))
+    end
     love.graphics.pop()
 end
